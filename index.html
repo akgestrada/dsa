@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Declaration of meta tags and viewports-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mananghaya, A.R. & Estrada, A.K.G.">
+    <!--Calling of stylesheets and fonts-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/indexstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [FONT] Days One -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <!-- [FONT] Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- [FONT] PP Neue Montreal -->
+    <link href="https://fonts.cdnfonts.com/css/pp-neue-montreal" rel="stylesheet">
+    <!--Site Logo and Title-->
+    <link rel="icon" href="resources/permanent/pshs_logo.png" type=".png">
+    <title>DSA</title>
+</head>
+
+<body>
+    
+    <div id = "header">
+        <h1 style = "font-family: 'Days One', serif; margin-left: 1vw;">DSA</h1>
+        <div id = "menubar">
+            <div class = "menubar-div">
+                <a href = "./htdocs/about.html">About</a>
+            </div>
+            <div class = "menubar-div">
+                <a href = "./htdocs/resources.html">Resources</a>
+            </div>
+        </div>
+    </div>
+    <div id = "container">
+        
+        <!-- moving background -->
+        <div class="containerbackground"></div> 
+
+        <!-- searchbar part -->
+        <div id="searchbar-container-2">
+            <div id="searchbar-container">
+                <div style="padding: .5vw;">
+                    <img src="./resources/permanent/search.png" id="searchbar-image">
+                </div>
+                <input id="searchbar" type="text" placeholder="What are you looking for?">
+            </div>
+            <div id="search-dropdown">
+                <!-- Search results go here -->
+            </div>
+        </div>
+
+        <!-- divisions -->
+        <div id = "divisions-container">
+            <!-- Leadership & Exchange Program -->
+            <div class = "division" id = "leadership-and-exchange-program" onclick="location.href='htdocs/leadershipandexchange.html'">
+                <div class = "division-name">
+                    <h1>Leadership & Exchange Program</h1>
+                </div>
+                <div class = "division-description">
+                    <p>The description of the division, maybe what things to be found in the page/for who</p>
+                </div>
+            </div>
+            <!-- Homeroom Program -->
+            <div class = "division" id = "homeroom-program" onclick="location.href='htdocs/homeroom.html'">
+                <div class = "division-name">
+                    <h1>Homeroom Program</h1>
+                </div>
+                <div class = "division-description">
+                    <p>The description of the division, maybe what things to be found in the page/for who</p>
+                </div>
+            </div>
+            <!-- Batch Council -->
+            <div class = "division" id = "batch-council" onclick="location.href='htdocs/batchcouncil.html'">
+                <div class = "division-name">
+                    <h1>Batch Council</h1>
+                </div>
+                <div class = "division-description">
+                    <p>The description of the division, maybe what things to be found in the page/for who</p>
+                </div>
+            </div>
+            <!-- Student Council -->
+            <div class = "division" id = "student-council" onclick="location.href='htdocs/studentcouncil.html'">
+                <div class = "division-name">
+                    <h1>Student Council</h1>
+                </div>
+                <div class = "division-description">
+                    <p>The description of the division, maybe what things to be found in the page/for who</p>
+                </div>
+            </div>
+            <!-- SIP -->
+            <div class = "division" id = "sip" onclick="location.href='htdocs/sip.html'">
+                <div class = "division-name">
+                    <h1>Science Immersion Program</h1>
+                </div>
+                <div class = "division-description">
+                    <p>The description of the division, maybe what things to be found in the page/for who</p>
+                </div>
+            </div>
+            <!-- SCALE -->
+            <div class = "division" id = "scale" onclick="location.href='htdocs/scale.html'">
+                <div class = "division-name">
+                    <h1>SCALE</h1>
+                </div>
+                <div class = "division-description">
+                    <p>The description of the division, maybe what things to be found in the page/for who</p>
+                </div>
+            </div>
+            <!-- Clubs -->
+            <div class = "division" id = "clubs" onclick="location.href='htdocs/clubs.html'">
+                <div class = "division-name">
+                    <h1>Clubs</h1>
+                </div>
+                <div class = "division-description">
+                    <p>The description of the division, maybe what things to be found in the page/for who</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "footer">
+        <div style = "display: flex; align-items: center;">
+            <img src = "./resources/permanent/pshs_logo.png" alt = "PSHS Logo" style="object-fit: contain;">
+            <div style = "color: white; margin-left: 1vw; font-family: 'Roboto', serif; font-weight: 200;">
+                <p style = "font-weight: 400;">Division of Student Affairs</p>
+                <p>Philippine Science High School - Main Campus</p>
+                <br>
+                <p>room #, Admin Building</p>
+                <p>CP #</p>
+                <p>email@pshs.edu.ph</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

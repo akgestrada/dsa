@@ -1,0 +1,299 @@
+#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 2vh 1rem;
+    /* gap: 2vh; */
+    margin-top: -10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    overflow: hidden;
+    padding-top: 6vh;
+
+    /* temmporary */
+    /* border: 1px solid blue; */
+    /* background: red; */
+    /* background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,.5),
+    rgba(0,0,0,.9),rgba(0,0,0,1)); */
+    background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(212, 221, 255, 0.3));
+}
+
+#header {
+    background: transparent; 
+}
+
+.containerbackground{
+    /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("./resources/white1.jpg"); */
+    /* background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url("../resources/white1.jpg"); */
+    /* background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,255,255,0.7),#ffecd4); */
+    /* background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,236,212,0.6)); */
+    /* background: red; */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../resources/pisay-field-1.jpg'); */
+    /* background: white; */
+    /* transition: 0.3s ease-out; */
+    /* transition: 0.3s ease-out, margin .7s ease; */
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../resources/pisay-field-1.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    margin-top: -6vh;
+    align-self: center;
+    
+    /* [NOTE] save this for when adding stuff below index */
+    /* animation: containerAnimation linear;
+    animation-timeline: view();
+    animation-range: exit 0 exit 60%;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease; */
+}
+
+@keyframes containerAnimation {
+    from{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+    to{
+        width: 95%;
+        height: 95%;
+        border-radius: 0 0 50px 50px;
+    }
+}
+
+#searchbar-container-2{
+    position: relative; 
+    /* width: 60%;  */
+    margin-top: 5vh; 
+    /* margin-bottom: 10vh; */
+    /* temporary */
+    /* background: blue;  */
+    z-index: 1;
+    align-self: center;
+    margin-bottom: 5vh;
+    width: 50%;
+    
+}
+
+#searchbar-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    /* border-radius: 0.5rem; */
+    border: 1px solid #ccc;
+    max-width: 100%;
+    /* max-width: 600px; */
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+#searchbar-container > div {
+    /* background-color: #333; */
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchbar-image{
+    width: 1.5rem; 
+    height: 1.5rem; 
+    object-fit: contain;
+    filter: invert(1);
+    transform: scaleX(-1);
+    margin-left: .4rem;
+}
+
+#searchbar {
+    border: none;
+    padding: 0.7rem;
+    font-size: 1rem;
+    outline: none;
+    color: #333;
+    background-color: white;
+    width: 100%;
+    margin-left: -0.5rem;
+    font-family: 'PP Neue Montreal', 'Roboto', serif;
+    letter-spacing: 0.01em;
+}
+
+#searchbar::placeholder {
+    color: #aaa;
+}
+
+#search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+#divisions-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    gap: 2rem;
+    z-index: 1;
+    position: relative;
+    justify-content: center;
+    align-self: center;
+    /* background: blue; */
+}
+
+.division {
+    position: relative;
+    flex: 1 1 300px;
+    /* max-width: 400px; */
+    max-width: 300px;
+    height: 100px;
+    color: #384c74;
+    overflow: hidden;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'PP Neue Montreal', 'Roboto', serif;
+    cursor: pointer;
+    /* border-radius: 0.5rem; */
+    /* box-shadow: 5px 5px #02459e, 0 0 2px 2px white; */
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.292);
+    /* border: 3px solid #0b62d2; */
+    /* apply to all; change 0.5 to 0.3 opacity */
+    /* box-shadow: 0 0 3px 3px #012c63; */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg') !important;  */
+    background: #f2f7ff !important;
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg') !important;  */
+}
+
+/* Image configs */
+#leadership-and-exchange-program {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');
+}
+#homeroom-program {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');
+}
+#batch-council {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');
+}
+#student-council {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');
+}
+#sip {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');
+}
+#scale {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');
+}
+#clubs {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');
+}
+
+.division-name, .division-description {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease, opacity 0.4s ease;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.division-name {
+    top: 0;
+    opacity: 1;
+    z-index: 2;
+    font-size: 1.2rem;
+    justify-content: center;
+}
+
+.division-name > h1 {
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: 500; */
+    /* font-size: ; */
+    /* font-weight: bold; */
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.division-description {
+    top: 100%;
+    opacity: 0;
+    z-index: 1;
+    /* font-size: 0.9rem; */
+    font-size: 1.2rem;
+    justify-content: left;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.division:hover .division-name {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.division:hover .division-description {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .division {
+        flex: 1 1 90%;
+        height: 160px;
+    }
+
+    .division-name {
+        font-size: 1rem;
+    }
+
+    .division-description {
+        font-size: 0.8rem;
+    }
+
+    #searchbar {
+        font-size: 0.9rem;
+    }
+}

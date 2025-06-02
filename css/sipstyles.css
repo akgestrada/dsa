@@ -1,0 +1,64 @@
+html {
+    overflow-x: hidden
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#requirements-container {
+    width: 25%;
+    max-width: 25%;
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 4vh auto;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+#table-container {
+    width: 60%;
+    max-width: 60%;
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 4vh auto;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#opportunities-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    overflow-y: auto;
+}
+
+#opportunities-table thead {
+    border-bottom: 2px solid #333;
+}
+
+#opportunities-table th, #opportunities-table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #opportunities-table {
+        font-size: 0.8rem;
+    }
+
+    #opportunities-table th,
+    #opportunities-table td {
+        padding: 0.5rem 0.4rem;
+    }
+
+    #requirements-container {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

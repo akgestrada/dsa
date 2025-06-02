@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Declaration of meta tags and viewports-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mananghaya, A.R. & Estrada, A.K.G.">
+    <!--Calling of stylesheets and fonts-->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/clubsstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [FONT] Days One -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <!-- [FONT] Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Site Logo and Title-->
+    <link rel="icon" href="../resources/permanent/pshs_logo.png" type=".png">
+    <title>DSA - Clubs</title>
+</head>
+
+<body>
+    <div id = "header">
+        <h1 style = "font-family: 'Days One', serif; margin-left: 1vw;">DSA</h1>
+        <div id = "menubar">
+            <div class = "menubar-div">
+                <a href = "../index.html">Home</a>
+            </div>
+            <div class = "menubar-div">
+                <a href = "./about.html">About</a>
+            </div>
+            <div class = "menubar-div">
+                <a href = "./resources.html">Resources</a>
+            </div>
+        </div>
+    </div>
+    <h1 style = "font-family: 'Days One', serif; margin-left: 1vw; margin-top: 1vh; margin-bottom: 1vh;">Clubs</h1>
+    <div class="club-exhibit">
+        <h2>Featured Clubs</h2>
+        <div class="club-carousel-wrapper">
+            <div class="club-carousel" id="clubTrack">
+                <!-- Slides will be injected dynamically -->
+            </div>
+        </div>
+    </div>
+    <div class="club-showcase">
+        <h2>Club Showcase</h2>
+        <div class="club-layout">
+            <!-- Club list -->
+            <div class="club-list" id="clubList"></div>
+            <!-- Details section -->
+            <div class="club-details">
+                <div class="gallery-wrapper">
+                    <img id="club-gallery-image" src="" alt="Gallery Image">
+                    <div class="gallery-dots" id="galleryDots"></div>
+                </div>
+                <div class="club-details-info">
+                    <h3 id="club-details-title">Club Name</h3>
+                    <div id="club-details-description" class="club-description-scroll">
+                    Club description will appear here.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "footer">
+        <div style = "display: flex; align-items: center;">
+            <img src = "../resources/permanent/pshs_logo.png" alt = "PSHS Logo" style="object-fit: contain;">
+            <div style = "color: white; margin-left: 1vw; font-family: 'Roboto', serif; font-weight: 200;">
+                <p style = "font-weight: 400;">Division of Student Affairs</p>
+                <p>Philippine Science High School - Main Campus</p>
+                <br>
+                <p>room #, Admin Building</p>
+                <p>CP #</p>
+                <p>email@pshs.edu.ph</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+const clubs = [
+    {
+        name: "Computron",
+        designation: "Academics & Service",
+        description: "The official CSIT Club of PSHS-MC.",
+        schedule: "Wednesday 1st Slot",
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://www.avaccess.com/wp-content/uploads/2024/10/AVA004241-1900x1069.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        name: "Likha",
+        designation: "Arts & Recreation",
+        description: "A space for passionate visual artists to express, collaborate, and create impactful works.",
+        schedule: "Wednesday 1st Slot",
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        name: "Flux",
+        designation: "Performing Arts",
+        description: "Swimming yay",
+        schedule: "Wednesday 2nd Slot",
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    }
+];
+
+// Render the slides
+const track = document.getElementById('clubTrack');
+clubs.forEach(club => {
+    const slide = document.createElement('div');
+    slide.className = 'club-slide';
+    slide.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${club.primaryImage}')`;
+
+    slide.innerHTML = `
+        <div class="club-info">
+            <h3>${club.name}</h3>
+            <p>${club.description}</p>
+        </div>
+    `;
+
+    track.appendChild(slide);
+});
+
+// Auto-scroll between slides
+let currentClub = 0;
+let scrollInterval;
+
+function goToClub(index) {
+    track.style.transform = `translateX(-${100 * index}%)`;
+    currentClub = index;
+}
+
+function startClubAutoScroll() {
+    clearInterval(scrollInterval);
+    scrollInterval = setInterval(() => {
+        const totalClubs = clubs.length;
+        currentClub = (currentClub + 1) % totalClubs;
+        goToClub(currentClub);
+    }, 6000);
+}
+
+startClubAutoScroll();
+
+// For the 2nd part
+const clubListContainer = document.getElementById("clubList");
+const galleryImage = document.getElementById("club-gallery-image");
+const galleryDots = document.getElementById("galleryDots");
+const clubTitle = document.getElementById("club-details-title");
+const clubDescription = document.getElementById("club-details-description");
+
+let currentClubIndex = 0;
+let currentGalleryIndex = 0;
+
+function renderClubList() {
+    clubs.forEach((club, index) => {
+        const entry = document.createElement("div");
+        entry.classList.add("club-list-entry");
+        entry.innerHTML = `
+        <strong>${club.name}</strong>
+        <span><strong>Designation:</strong> ${club.designation}</span>
+        <span><strong>Schedule:</strong> ${club.schedule}</span>
+        `;
+        entry.addEventListener("click", () => selectClub(index));
+        clubListContainer.appendChild(entry);
+    });
+    selectClub(0);
+}
+
+function renderGalleryDots(images) {
+    galleryDots.innerHTML = "";
+    images.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.addEventListener("click", () => selectGalleryImage(index));
+        galleryDots.appendChild(dot);
+    });
+}
+
+function updateActiveDot(index) {
+    [...galleryDots.children].forEach((dot, i) =>
+        dot.classList.toggle("active", i === index)
+    );
+}
+
+function selectGalleryImage(index) {
+    if (index === currentGalleryIndex) return;
+
+    const club = clubs[currentClubIndex];
+    currentGalleryIndex = index;
+
+    galleryImage.style.opacity = 0;
+
+    setTimeout(() => {
+        galleryImage.src = club.gallery[index];
+        galleryImage.onload = () => {
+            galleryImage.style.opacity = 1;
+        };
+    }, 250);
+
+    updateActiveDot(index);
+}
+let firstCall = true;
+function selectClub(index) {
+    if (!firstCall && index === currentClubIndex) return;
+    firstCall = false;
+
+    currentClubIndex = index;
+    currentGalleryIndex = 0;
+
+    [...clubListContainer.children].forEach((el, i) =>
+        el.classList.toggle("active", i === index)
+    );
+
+    const club = clubs[index];
+
+    galleryImage.style.opacity = 0;
+    setTimeout(() => {
+        galleryImage.src = club.gallery[0];
+        galleryImage.onload = () => {
+            galleryImage.style.opacity = 1;
+        };
+    }, 250);
+
+    clubTitle.textContent = club.name;
+    clubDescription.textContent = club.description;
+
+    renderGalleryDots(club.gallery);
+    updateActiveDot(0);
+}
+
+// Initial render
+renderClubList();
+</script>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Declaration of meta tags and viewports-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mananghaya, A.R. & Estrada, A.K.G.">
+    <!--Calling of stylesheets and fonts-->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resourcesstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [FONT] Days One -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <!-- [FONT] Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Site Logo and Title-->
+    <link rel="icon" href="../resources/permanent/pshs_logo.png" type=".png">
+    <title>DSA - Resources</title>
+</head>
+
+<body>
+    <div id = "header">
+        <h1 style = "font-family: 'Days One', serif; margin-left: 1vw;">DSA</h1>
+        <div id = "menubar">
+            <div class = "menubar-div">
+                <a href = "../index.html">Home</a>
+            </div>
+            <div class = "menubar-div">
+                <a href = "./about.html">About</a>
+            </div>
+            <div class = "menubar-div">
+                <a href = "./resources.html">Resources</a>
+            </div>
+        </div>
+    </div>
+    <h1 style = "font-family: 'Days One', serif; margin-left: 1vw; margin-top: 1vh; margin-bottom: 1vh;">Resources</h1>
+    <hr>
+    <div class="file-browser">
+        <div class="sidebar">
+            <label>SEARCH</label>
+            <input type="text" id="fileSearch" placeholder="Search resources here...">
+            <div class="filter-group">
+            <label><input type="checkbox" class="division-filter" value="Leadership and Exchange Program" checked> Leadership and Exchange Program</label>
+            <label><input type="checkbox" class="division-filter" value="Homeroom Program" checked> Homeroom Program</label>
+            <label><input type="checkbox" class="division-filter" value="Batch Council" checked> Batch Council</label>
+            <label><input type="checkbox" class="division-filter" value="Student Council" checked> Student Council</label>
+            <label><input type="checkbox" class="division-filter" value="SCALE" checked> SCALE</label>
+            <label><input type="checkbox" class="division-filter" value="Clubs" checked> Clubs</label>
+            </div>
+        </div>
+        <div class="file-grid" id="fileGrid"></div>
+    </div>
+    <div id = "footer">
+        <div style = "display: flex; align-items: center;">
+            <img src = "../resources/permanent/pshs_logo.png" alt = "PSHS Logo" style="object-fit: contain;">
+            <div style = "color: white; margin-left: 1vw; font-family: 'Roboto', serif; font-weight: 200;">
+                <p style = "font-weight: 400;">Division of Student Affairs</p>
+                <p>Philippine Science High School - Main Campus</p>
+                <br>
+                <p>room #, Admin Building</p>
+                <p>CP #</p>
+                <p>email@pshs.edu.ph</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const files = [
+    { name: "SCALE Form 1", division: "SCALE", href: "#" },
+    { name: "SCALE Form 2", division: "SCALE", href: "#" },
+    { name: "SCALE Form 3", division: "SCALE", href: "#" },
+    { name: "SCALE Primer", division: "SCALE", href: "https://drive.google.com/file/d/12-TFNHvaXDVArdmbrqCGi_x_GHmFNRgQ/view" },
+    { name: "SCALE Journal", division: "SCALE", href: "https://drive.google.com/file/d/1Sp666sIS4kJDRYUjvMc5slpy9g6_egEV/view" },
+    { name: "A. Santos Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "A. Santos Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Alcala Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Alcala Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Baltazar Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Baltazar Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Banzon Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Banzon Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Cruz Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Cruz Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Del Mundo Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Del Mundo Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Del Rosario Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Del Rosario Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Fronda Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Fronda Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "G. Velasquez Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "G. Velasquez Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Gomez Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Gomez Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Juliano Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Juliano Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Ramirez Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Ramirez Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Trono Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Trono Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Velasco Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Velasco Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Vergara Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Vergara Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Zara Form 2 Submission", division: "SCALE", href: "#" },
+    { name: "Zara Form 3 Submission", division: "SCALE", href: "#" },
+    { name: "Sample", division: "Leadership and Exchange Program", href: "#" },
+    { name: "Sample", division: "Homeroom Program", href: "#" },
+    { name: "Sample", division: "Batch Council", href: "#" },
+    { name: "Sample", division: "Student Council", href: "#" },
+    { name: "Sample", division: "Clubs", href: "#" },
+    ];
+
+    const fileGrid = document.getElementById('fileGrid');
+    const fileSearch = document.getElementById('fileSearch');
+    const checkboxes = document.querySelectorAll('.division-filter');
+
+    function renderFiles() {
+        const searchQuery = fileSearch.value.toLowerCase();
+        const activeDivisions = [...checkboxes].filter(cb => cb.checked).map(cb => cb.value);
+
+        fileGrid.innerHTML = '';
+
+        const divisionOrder = [
+            "Leadership and Exchange Program",
+            "Homeroom Program",
+            "Batch Council",
+            "Student Council",
+            "SCALE",
+            "Clubs"
+        ];
+
+        divisionOrder.forEach(division => {
+            if (!activeDivisions.includes(division)) return;
+
+            const divisionFiles = files.filter(file => 
+            file.division === division && file.name.toLowerCase().includes(searchQuery)
+            );
+
+            divisionFiles.forEach(file => {
+            const card = document.createElement('a');
+            card.className = 'file-card';
+            card.href = file.href;
+            card.target = '_blank';
+            card.rel = 'noopener noreferrer';
+
+            card.innerHTML = `
+                <div class="file-name">${file.name}</div>
+                <div class="file-division">${file.division}</div>
+            `;
+
+            fileGrid.appendChild(card);
+            });
+        });
+    }
+
+    fileSearch.addEventListener('input', renderFiles);
+    checkboxes.forEach(cb => cb.addEventListener('change', renderFiles));
+
+    // Initial render
+    renderFiles();
+</script>
+</html>

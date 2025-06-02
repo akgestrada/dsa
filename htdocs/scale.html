@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Declaration of meta tags and viewports-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mananghaya, A.R. & Estrada, A.K.G.">
+    <!--Calling of stylesheets and fonts-->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/scalestyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [FONT] Days One -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <!-- [FONT] Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Site Logo and Title-->
+    <link rel="icon" href="../resources/permanent/pshs_logo.png" type=".png">
+    <title>DSA - SCALE</title>
+</head>
+
+<body>
+    <div id = "header">
+        <h1 style = "font-family: 'Days One', serif; margin-left: 1vw;">DSA</h1>
+        <div id = "menubar">
+            <div class = "menubar-div">
+                <a href = "../index.html">Home</a>
+            </div>
+            <div class = "menubar-div">
+                <a href = "./about.html">About</a>
+            </div>
+            <div class = "menubar-div">
+                <a href = "./resources.html">Resources</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="hex-outer">
+            <div class="hex">
+                <div>
+                    <div class="hex-trans"></div>
+                </div>
+                <div>
+                    <div class="hex-trans"></div>
+                </div>
+                <div>
+                    <div></div> 
+                </div>
+                <div>
+                    <div></div> 
+                </div>
+                <div>
+                    <div></div> 
+                    <div></div>
+                </div>
+                <div>
+                    <div></div> 
+                    <div></div>
+                </div>
+                <div>
+                    <div></div> 
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div> 
+                    <div> <div></div> </div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div> 
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div> 
+                    <div></div>
+                    <div> <div class="test"></div> </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="image-side"></div> -->
+        <div class="links-side">
+            <a id="scalejournal" href="https://drive.google.com/file/d/1Sp666sIS4kJDRYUjvMc5slpy9g6_egEV/view" target="_blank">SCALE Journal</a>
+            <a id="scaleprimer" href="https://drive.google.com/file/d/12-TFNHvaXDVArdmbrqCGi_x_GHmFNRgQ/view" target="_blank">SCALE Primer</a>
+            <a id="scaleprimer" href="../resources.html" target="_blank">Form Submissions</a>
+        </div>
+    </div>
+    <div class="class-showcase">
+        <h2>SCALE Class Showcase</h2>
+        <div class="class-layout">
+            <!-- Class list -->
+            <div class="class-list" id="classList"></div>
+
+            <!-- Details section -->
+            <div class="class-details">
+            <div class="gallery-wrapper">
+                <img id="class-gallery-image" src="" alt="Gallery Image">
+                <div class="gallery-dots" id="classGalleryDots"></div>
+            </div>
+            <div class="class-details-info">
+                <h3 id="class-details-title">Class Name</h3>
+                <div id="class-details-description" class="class-description-scroll">
+                Class description will appear here.
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="opportunities-container">
+        <h2>Other Opportunities</h2>
+        <div class="tables-wrapper">
+            <div class="opportunities-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Strand/s</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody id="opportunities-body">
+                        <!-- Rows will be generated via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id = "footer">
+        <div style = "display: flex; align-items: center;">
+            <img src = "../resources/permanent/pshs_logo.png" alt = "PSHS Logo" style="object-fit: contain;">
+            <div style = "color: white; margin-left: 1vw; font-family: 'Roboto', serif; font-weight: 200;">
+                <p style = "font-weight: 400;">Division of Student Affairs</p>
+                <p>Philippine Science High School - Main Campus</p>
+                <br>
+                <p>room #, Admin Building</p>
+                <p>CP #</p>
+                <p>email@pshs.edu.ph</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+const classes = [
+    {
+        class: "Responsible Outdoor Recreation",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Leo Andrei Crisologo",
+        schedule: "Wednesdays 7:20-9:00 (in-school), Saturday (hiking, TBA)",
+        description: `
+        In ROR we will complete two hikes on outdoor destinations in Rizal and/or Batangas. 
+        As preparation for these hikes we will learn about how to responsibly participate in outdoor activities and engage in physical exercise.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Yoga",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Philip Lim",
+        schedule: "Wednesdays TBA",
+        description: `
+        TBA
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Pisay Stewards",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Justin Guce",
+        schedule: "Wednesdays 9:10-10:40",
+        description: `
+        Sawa ka na ba sa makalat na Pisay? 
+        At may piso upang bumuo ng kulturang pisay na di lang puro husay ng isip ang kayang gawin? 
+        Ito na ang SCALE na para sayo. Tara at gumawa tayo ng kulturang mag aahon sa atin sa kalat at kawalang pakialam sa kapaligiran.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Philippine Games",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Jade Mark Alvarez",
+        schedule: "Wednesdays 1:50-3:30",
+        description: `
+        Philippine Games class introduces traditional games as a form of physical activity along with game mechanics and cultural context. 
+        It explores the fundamental knowledge and essential skills in playing different games.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Basic Japanese",
+        strands: [
+            "A"
+        ],
+        adviser: "Ma'am Kimberly Favor",
+        schedule: "Wednesdays 1:50-3:30",
+        description: `
+        Basic Japanese is an introductory course to learning the Japanese language. 
+        Classes will be conducted via lessons covered in Genki I; 
+        writing workshops leading students to familiarize themselves and later memorize the 2 writing systems of Japan (Hiragana and Katakana) and write at least 50 kanji characters. 
+        Listening exercises where students can familiarize themselves with how the language is spoken and be able to speak basic Japanese they can use in casual conversations.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Toy Making & Customizing",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Ervin Santos",
+        schedule: "Wednesdays 9:10-10:40",
+        description: `
+        Toy Making and Customizing is a hands-on class that will expose students to this non-conventional art form and hobby. 
+        The course will give the students a unique experience of designing and eventually making their own toys and pieces of art. 
+        The students will learn about the different techniques and methods used in this field. 
+        The course will culminate with an art gallery type exhibit to showcase the student works.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Filipino Journalism",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Efren Domingo",
+        schedule: "Wednesdays 1:50-3:30",
+        description: `
+        Ang Pamamahayag sa Filipino ay isang SCALE class na asignatura sa Filipino. 
+        Bibigyang tuon sa kurso ang kakayanan sa pangangalap ng kaalaman, pagsasakonteksto at paghubog sa kritikal na pag-iisip sa iba’t ibang uri ng batis o sanggunian. 
+        Mayroong diin sa pagsasakatuparan ng isang etikal na pamamahayag na nakasandig sa katotohanan at paglilingkod.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Dance Your Way to Fitness",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Jade Mark Alvarez",
+        schedule: "Wednesdays TBA",
+        description: `
+        Dance Fitness class offers various cardio rhythmic routines performing choreographed exercises and dance movements 
+        which create an increased demand of oxygen over an extended period of time. This a challenging active course combining movement exercises 
+        and different dance forms set to music for fun, fitness and wellness.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Malikhaing Pagsulat",
+        strands: [
+            "A"
+        ],
+        adviser: "Ma'am China Patria de Vera",
+        schedule: "Wednesdays 9:10-10:40",
+        description: `
+        Panimulang kurso sa sining ng pagsulat sa magkakaibang uri ng panitikan kabilang na ang tula, maikling kwento, kuwentong pambata at eksperimental na pagsulat.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Introduction to Architecture",
+        strands: [
+            "A"
+        ],
+        adviser: "Ma'am Ana Tazula Carvajal",
+        schedule: "Wednesdays 9:10-10:40",
+        description: `
+        This course introduces architectural concepts, focusing on design principles, creativity, service, and leadership. 
+        Students will engage in project-based learning, creating architectural designs that benefit the community, while developing their creative and leadership skills.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Swimming for Fitness",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Robert Duliesco",
+        schedule: "Wednesdays 1:50-3:30",
+        description: `
+        Swimming is an excellent activity with lasting positive effects and can be a lifesaving skill.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Creative Paper Crafting",
+        strands: [
+            "A"
+        ],
+        adviser: "Ma'am Melanie Cheng",
+        schedule: "Wednesdays 1:50-3:30",
+        description: `
+        Explore the possibilities of Creative Paper Crafting in this hands-on course, where you'll work with the versatile medium of paper. 
+        Whether you're new to crafting or have some experience, you'll enjoy learning techniques like cutting, folding, and coloring. 
+        Together, we'll create a variety of projects, from cards and scrapbook pages to decorations for special occasions. 
+        Join us and discover how simple paper can be transformed into beautiful and practical creations.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Bio Gaming",
+        strands: [
+            "A"
+        ],
+        adviser: "Ma'am Maria Elena Pinlac",
+        schedule: "Wednesdays 9:10-10:40",
+        description: `
+        This class will introduce students to biology-themed board and card games to help them explore and appreciate concepts such as ecology, 
+        evolution, anatomy and physiology, and molecular and cell biology. Students will share their experience of learning through games by planning, 
+        implementing, and improving a game workshop for a general audience. Students will also share their learning journey through a creative output 
+        that documents and reflects on their experience with biology-themed games. This class is designed to accommodate the Service, Creativity, and Leadership strands of the SCALE program.
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+    {
+        class: "Life Skills 101",
+        strands: [
+            "A"
+        ],
+        adviser: "Sir Justin Ray Guce",
+        schedule: "Wednesdays TBA",
+        description: `
+        TBA
+        `,
+        primaryImage: "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+        gallery: [
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg",
+            "https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg"
+        ]
+    },
+];
+
+const other_opportunities = [
+    {
+        name: "Pisay @60",
+        strands: [
+            "A"
+        ],
+        contact: "Sir Leo Andrei Crisologo",
+    },
+    {
+        name: "Pisay @60",
+        strands: [
+            "A"
+        ],
+        contact: "Sir Leo Andrei Crisologo",
+    },
+    {
+        name: "Pisay @60",
+        strands: [
+            "A"
+        ],
+        contact: "Sir Leo Andrei Crisologo",
+    },
+]
+
+const classListContainer = document.getElementById("classList");
+const galleryImage = document.getElementById("class-gallery-image");
+const galleryDots = document.getElementById("classGalleryDots");
+const classTitle = document.getElementById("class-details-title");
+const classDescription = document.getElementById("class-details-description");
+
+let currentClassIndex = 0;
+let currentGalleryIndex = 0;
+let firstClassCall = true;
+
+function renderClassList() {
+    classes.forEach((entry, index) => {
+        const el = document.createElement("div");
+        el.classList.add("class-list-entry");
+        el.innerHTML = `
+        <strong>${entry.class}</strong>
+        <span><strong>Adviser:</strong> ${entry.adviser}</span>
+        <span><strong>Strand/s:</strong> ${entry.strands.length > 0 ? entry.strands.join(", ") : "TBA"}</span>
+        <span><strong>Schedule:</strong> ${entry.schedule}</span>
+        `;
+        el.addEventListener("click", () => selectClass(index));
+        classListContainer.appendChild(el);
+    });
+    selectClass(0);
+    classListContainer.children[0]?.classList.add("active");
+}
+
+function renderGalleryDots(images) {
+    galleryDots.innerHTML = "";
+    images.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.addEventListener("click", () => selectGalleryImage(index));
+        galleryDots.appendChild(dot);
+    });
+}
+
+function updateActiveDot(index) {
+    [...galleryDots.children].forEach((dot, i) =>
+        dot.classList.toggle("active", i === index)
+    );
+}
+
+function selectGalleryImage(index) {
+    if (index === currentGalleryIndex) return;
+
+    const entry = classes[currentClassIndex];
+    currentGalleryIndex = index;
+
+    galleryImage.style.opacity = 0;
+    setTimeout(() => {
+        galleryImage.src = entry.gallery[index];
+        galleryImage.onload = () => {
+            galleryImage.style.opacity = 1;
+        };
+    }, 250);
+
+    updateActiveDot(index);
+}
+
+function selectClass(index) {
+    if (!firstClassCall && index === currentClassIndex) return;
+    firstClassCall = false;
+
+    currentClassIndex = index;
+    currentGalleryIndex = 0;
+
+    [...classListContainer.children].forEach((el, i) =>
+        el.classList.toggle("active", i === index)
+    );
+
+    const entry = classes[index];
+
+    galleryImage.style.opacity = 0;
+    setTimeout(() => {
+        galleryImage.src = entry.gallery[0];
+        galleryImage.onload = () => {
+            galleryImage.style.opacity = 1;
+        };
+    }, 250);
+
+    classTitle.textContent = entry.class;
+    classDescription.innerHTML = `
+    <p><strong>Adviser:</strong> ${entry.adviser}</p>
+    <p><strong>Strands:</strong> ${entry.strands.join(", ")}</p>
+    <p><strong>Schedule:</strong> ${entry.schedule}</p>
+    <br>
+    <p>${entry.description.trim()}</p>
+    `;
+
+    renderGalleryDots(entry.gallery);
+    updateActiveDot(0);
+}
+
+// For other opportunities
+const opportunityBody = document.getElementById("opportunities-body");
+
+other_opportunities.forEach(op => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${op.name}</td>
+        <td>${op.strands.length ? op.strands.join(", ") : "TBA"}</td>
+        <td>${op.contact || "TBA"}</td>
+    `;
+
+    opportunityBody.appendChild(row);
+});
+
+// Initial render
+renderClassList();
+</script>
+</html>
