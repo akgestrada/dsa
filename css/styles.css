@@ -12,20 +12,50 @@
     /* justify-content: space-between; */
     position: sticky;
     top: 0;
-    /* border-bottom: 2px solid black; */
     z-index: 999;
     padding: 0 1rem;
     user-select: none; 
-    /* background: white; */
-    /* background: rgb(224,228,236); */
-    /* transparent version: */ 
     background: rgb(4,44,98,0.1);
+
+    animation: headerAnimation linear;
+    animation-timeline: scroll();
+    animation-range: exit 0 exit 10vh;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.header-no-animation {
+    background: transparent !important;
+}
+
+@keyframes headerAnimation {
+    from{
+        background: rgb(4,44,98,0.1);
+    }
+    to{
+        background: transparent;
+    }
 }
 
 .division-styles {
     font-family: 'Days One', serif; 
-    margin-left: 1vw;
     letter-spacing: 0.03em;
+    font-size: 1.5rem;
+
+    animation: divisionStylesAnimation linear;
+    animation-timeline: scroll();
+    animation-range: exit 0 exit 10vh;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes divisionStylesAnimation {
+    from{
+        color: black;
+    }
+    to{
+        color: transparent;
+    }
 }
 
 #header h1:first-of-type {
@@ -38,30 +68,32 @@
 
 #menubar {
     font-family: 'PP Neue Montreal', 'Roboto', serif;
-    /* font-family: 'Roboto', serif; */
     font-weight: 500;
     font-size: 1.2rem;
     display: flex;
     gap: .1rem;
     position: absolute;
-    /* background: red; */
     left:50%;
     transform: translate(-50%, 0);
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, .1);
-    margin-top: .3rem
+    background: rgba(0, 0, 0, .1);
+    margin-top: .3rem;
 }
 
 .menubar-right {
     position: absolute;
-    /* background: red; */
     left: auto !important; 
     right: 30px !important;
     transform: translate(0, 0) !important;
+    background: #012c63 !important;
+    color: white !important;
+}
+
+.menubar-right .menubar-div:hover {
+    color: yellow !important;
 }
 
 .division-styles {
-    /* background: blue; */
     position: absolute;
     left:50%;
     transform: translate(-50%, 0);
@@ -70,19 +102,16 @@
 #menubar a {
     text-decoration: none;
     color: inherit;
-    /* font-weight: bold; */
 }
 
 .menubar-div {
     padding: 0.3rem 0.8rem;
-    /* padding: 0.3rem rem; */
     border-radius: 0.5rem;
     transition: 0.3s ease;
-    color: black;
+
 }
 
 .menubar-div:hover {
-    /* background-color: black; */
     color: #0b5ff4;
 }
 

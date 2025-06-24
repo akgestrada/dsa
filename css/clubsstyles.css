@@ -1,8 +1,8 @@
 .club-exhibit {
     width: 100%;
-    min-height: 90vh;
+    /* min-height: 90vh; */
     padding: 2rem;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
 }
 
 .club-exhibit h2 {
@@ -12,9 +12,9 @@
 }
 
 .club-carousel-wrapper {
-    position: relative;
     max-width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .club-carousel {
