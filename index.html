@@ -7,7 +7,7 @@
     <!-- Calling of stylesheets and fonts -->
     <link rel="stylesheet" href="./css/styles.css"> <!-- Keep on top -->
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- [FONT] Days One -->
@@ -25,16 +25,16 @@
     <title>DSA</title>
 </head>
 <body>
-    <div class="header">
-        <h1>DSA</h1>
-        <div>
+    <div id="header">
+        <h1 class="logo">DSA</h1>
+        <div class="nav">
             <div><a href="./html/about.html">About</a></div>
             <div><a href="./html/resources.html">Resources</a></div>
         </div>
     </div>
     <div class="frontImage">
         <div class="frontImage1">
-            <div>Division <span>of</span> Student Affairs</div>
+            <div style="text-align: center;">Division <span>of</span> Student Affairs</div>
         </div>
         <div class="searchbar-container">
             <img src="./resources/images/search.png" alt="">
@@ -53,7 +53,7 @@
             <a href="./html/homeroom.html"><div>Homeroom Program</div></a> 
         </div>
     </div>
-    <div class="dsaOfficesContainerV2">
+    <!-- <div class="dsaOfficesContainerV2">
         <div class="dsaOfficesContainerV2-1">
             1
         </div>
@@ -63,12 +63,18 @@
         <div class="dsaOfficesContainerV2-3">
 
         </div>
-    </div>
-    <div class="footer">
-        <img src="./resources/images/pshs_logo.png" alt="">
-        <div>
-            <h3>Division of Student Affairs</h3>
-            <h4></h4>
+    </div> -->
+    <div id = "footer">
+        <div style = "display: flex; align-items: center;">
+            <img src = "./resources/permanent/pshs_logo.png" alt = "PSHS Logo" style="object-fit: contain;">
+            <div style = "color: white; margin-left: 1vw; font-family: 'Roboto', serif; font-weight: 200;">
+                <p style = "font-weight: 400;">Division of Student Affairs</p>
+                <p>Philippine Science High School - Main Campus</p>
+                <br>
+                <p>room #, Admin Building</p>
+                <p>CP #</p>
+                <p>email@pshs.edu.ph</p>
+            </div>
         </div>
     </div>
 </body>

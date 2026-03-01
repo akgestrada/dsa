@@ -9,6 +9,7 @@
     <!--Calling of stylesheets and fonts-->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/leadershipandexchange.css">
+    <link rel="stylesheet" href="../dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- [FONT] Days One -->
@@ -17,227 +18,214 @@
     <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- [FONT] PP Neue Montreal -->
     <link href="https://fonts.cdnfonts.com/css/pp-neue-montreal" rel="stylesheet">
+    <!-- [FONT] Work Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- [FONT] Niconne -->
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!--Site Logo and Title-->
     <link rel="icon" href="../resources/permanent/pshs_logo.png" type=".png">
     <title>DSA - Leadership & Exchange Program</title>
 </head>
 
 <body>
-    <div id = "header">
-        <h1 style = "font-family: 'Days One', serif; margin-left: 1vw;">DSA</h1>
-        <h1 class="division-styles">Leadership and Exchange Program</h1>
-        <div id = "menubar" class="menubar-right">
-            <div class = "menubar-div">
-                <a href = "../index.html">Home</a>
-            </div>
-            <div class = "menubar-div">
-                <a href = "./about.html">About</a>
-            </div>
-            <div class = "menubar-div">
-                <a href = "./resources.html">Resources</a>
-            </div>
+    <div id="header">
+        <h1 class="logo">DSA</h1>
+
+        <h1 class="page-name hidden md:block">Leadership and Exchange Program</h1>
+
+        <div class="nav">
+            <div><a href="../index.html">Home</a></div>
+            <div><a href="./about.html">About</a></div>
+            <div><a href="./resources.html">Resources</a></div>
         </div>
     </div>
-
-    <div class="super-container">
-        
-        <!-- <div class="division-title">
-            <h1>Leadership and Exchange Program</h1>
-        </div> -->
-        <div class="container">
-            <div id="table-container">
-                <!-- <div class="label-container">
-                    <h2>Opportunities</h2>
-                    <p>Updated 28 May 2025</p>
-                    change css if class label will be used:
-                    .container
-                    #table-container 
-                    #opportunities-table 
-                    #opportunities-table thead
-                    #opportunities-table td:first-of-type
-                    #opportunities-table td:last-of-type
-                </div> -->
-                <table id="opportunities-table">
-                    <thead>
-                        <tr>
-                            <th>About</th>
-                            <th>Location</th>
-                            <th>Contact</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <div class="scroll-up-indicator"></div>
-                        <tr class="opportunity" 
-                        data-title="Hiroshima Internation Science Fair" 
-                        data-description="The Leadership and Exchange Programs Committee would want to invite you to apply as a student-participant during the Exchange program with students from Hiroshima, Japan. We are looking for twenty-five students who would like to participate in the said program. The applicant should/must:"
-                        data-qualifications="
-                            <ul>
-                                <li>be 15 to 17 years old;</li>
-                                <li>have NO pending disciplinary case;</li>
-                                <li>have good communication skills in English;</li>
-                                <li>be in Good Standing last school year (SY 2022-2023);</li>
-                                <li>have NO grade lower than 2.50 in any of the subjects in the First Quarter, SY 2023-2024; and</li>
-                                <li>preferably have interest in Japanese culture and with talents in music and/or dance (for the group performance).</li>
-                            </ul>"
-                        data-extra=" 
-                        <p>Additionally, all students who will be selected for the program are expected to participate in the events in school on January 5 and 7, 2024 (Friday 9-11AM and Sunday 830AM-430PM, respectively).</p>
-                        
-                        <p>Moreover, seven (7) out of all the participants in the program will be chosen to join the Intramuros Tour with the Japanese delegates on January 6, 2024 (Saturday).</p>
-                        
-                        <p>If you are interested to apply, please fill out this form by 26 Dec, 12NN. Some FAQs will be posted on this <a href='#''>link</a>.</p>">
-                            <td>Hiroshima Internation Science Fair</td>
-                            <td>Quezon City</td>
-                            <td>Leo Andrei Crisologo</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 2</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 3</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 4</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 5</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 5</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 5</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 5</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 5</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 5</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                        <tr>
-                            <td>School 5</td>
-                            <td>Quezon City</td>
-                            <td>Robert Duliesco</td>
-                            <td>Jan 16 – Feb 24</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="scroll-down-indicator"></div>  
-                
-            </div>
-            
-            <h2 id="qualifications-container-title">Select an opportunity to view details</h2>
-            <div id="qualifications-container">
-                
-                
-
-                <p>Click any opportunity from the table on the left to view the full qualifications and details here.</p>
-                <!-- <h2>Hiroshima Internation Science Fair</h2>
-                <p>The Leadership and Exchange Programs Committee would want to invite you to apply as a student-participant during the Exchange program with students from Hiroshima, Japan. We are looking for twenty-five students who would like to participate in the said program. The applicant should/must:</p>
-                <ul style = "margin: 2% auto">
-                    <li>be 15 to 17 years old;</li>
-                    <li>have NO pending disciplinary case;</li>
-                    <li>have good communication skills in English;</li>
-                    <li>be in Good Standing last school year (SY 2022-2023);</li>
-                    <li>have NO grade lower than 2.50 in any of the subjects in the First Quarter, SY 2023-2024; and</li>
-                    <li>preferably have interest in Japanese culture and with talents in music and/or dance (for the group performance).</li>
-                </ul>
-                <p>Additionally, all students who will be selected for the program are expected to participate in the events in school on January 5 and 7, 2024 (Friday 9-11AM and Sunday 830AM-430PM, respectively).</p>
-                <p>Moreover, seven (7) out of all the participants in the program will be chosen to join the Intramuros Tour with the Japanese delegates on January 6, 2024 (Saturday).</p>
-                <p>If you are interested to apply, please fill out this form by 26 Dec, 12NN. Some FAQs will be posted on this <a href="#">link</a>.</p> -->
-            </div>
+    <h2 class="sectionTitle" style="margin-top:5vh">OPPORTUNITIES</h2>
+    <div class="container">
+        <div id="table-container" class="w-3/4 lg:w-[50%]">
+            <!-- <div class="label-container">
+                <h2>Opportunities</h2>
+                <p>Updated 28 May 2025</p>
+                change css if class label will be used:
+                .container
+                #table-container 
+                #opportunities-table 
+                #opportunities-table thead
+                #opportunities-table td:first-of-type
+                #opportunities-table td:last-of-type
+            </div> -->
+            <table id="opportunities-table">
+                <thead>
+                    <tr>
+                        <th>About</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="opportunity" 
+                    data-title="Hiroshima International Science Fair"
+                    data-location="Quezon City"
+                    data-contact="Leo Andrei Crisologo"
+                    data-date="Jan 16 - Feb 24"
+                    data-description="The Leadership and Exchange Programs Committee would want to invite you to apply as a student-participant during the Exchange program with students from Hiroshima, Japan. We are looking for twenty-five students who would like to participate in the said program. The applicant should/must:"
+                    data-qualifications="
+                        <ul>
+                            <li>be 15 to 17 years old;</li>
+                            <li>have NO pending disciplinary case;</li>
+                            <li>have good communication skills in English;</li>
+                            <li>be in Good Standing last school year (SY 2022-2023);</li>
+                            <li>have NO grade lower than 2.50 in any of the subjects in the First Quarter, SY 2023-2024; and</li>
+                            <li>preferably have interest in Japanese culture and with talents in music and/or dance (for the group performance).</li>
+                        </ul>"
+                    data-extra=" 
+                    <p>Additionally, all students who will be selected for the program are expected to participate in the events in school on January 5 and 7, 2024 (Friday 9-11AM and Sunday 830AM-430PM, respectively).</p>
+                    
+                    <p>Moreover, seven (7) out of all the participants in the program will be chosen to join the Intramuros Tour with the Japanese delegates on January 6, 2024 (Saturday).</p>
+                    
+                    <p>If you are interested to apply, please fill out this form by 26 Dec, 12NN. Some FAQs will be posted on this <a href='#'>link</a>.</p>">
+                        <td>Hiroshima International Science Fair</td>
+                        <td>Quezon City</td>
+                        <td>Leo Andrei Crisologo</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 2</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 3</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 4</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 5</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 5</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 5</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 5</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 5</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 5</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                    <tr>
+                        <td>School 5</td>
+                        <td>Quezon City</td>
+                        <td>Robert Duliesco</td>
+                        <td>Jan 16 – Feb 24</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="testimonials-section">
-            <h2>TESTIMONIALS</h2>
-            <div class="testimonials-carousel-wrapper">
-                <div class="testimonials-carousel" id="testimonialTrack">
-                <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
-                    <div class="testimonial-content">
-                    <p class="quote">"This program changed my life!"</p>
-                    <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
-                    </div>
-                </div>
-                <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
-                    <div class="testimonial-content">
-                    <p class="quote">"This program changed my life!"</p>
-                    <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
-                    </div>
-                </div>
-                <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
-                    <div class="testimonial-content">
-                    <p class="quote">"This program changed my life!"</p>
-                    <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
-                    </div>
-                </div>
-                <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
-                    <div class="testimonial-content">
-                    <p class="quote">"This program changed my life!"</p>
-                    <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
-                    </div>
-                </div>
-                <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
-                    <div class="testimonial-content">
-                    <p class="quote">"This program changed my life!"</p>
-                    <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
-                    </div>
-                </div>
-                <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
-                    <div class="testimonial-content">
-                    <p class="quote">"This program changed my life! This program was so awesome oh my goodness!!!"</p>
-                    <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
-                    </div>
-                </div>
-                <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
-                    <div class="testimonial-content">
-                    <p class="quote">"This program changed my life!"</p>
-                    <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
-                    </div>
-                </div>
-                <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
-                    <div class="testimonial-content">
-                    <p class="quote">"This program changed my life!"</p>
-                    <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
-                    </div>
-                </div>
-                <!-- Duplicate here -->
-                </div>
-                <div class="testimonial-dots" id="testimonialDots"></div>
-            </div>
+        <div id="qualifications-container" class="w-3/4 lg:w-[40%]">
+            <p>Click any opportunity from the table to view the full qualifications and details.</p>
+            <!-- <h2>Hiroshima Internation Science Fair</h2>
+            <p>The Leadership and Exchange Programs Committee would want to invite you to apply as a student-participant during the Exchange program with students from Hiroshima, Japan. We are looking for twenty-five students who would like to participate in the said program. The applicant should/must:</p>
+            <ul style = "margin: 2% auto">
+                <li>be 15 to 17 years old;</li>
+                <li>have NO pending disciplinary case;</li>
+                <li>have good communication skills in English;</li>
+                <li>be in Good Standing last school year (SY 2022-2023);</li>
+                <li>have NO grade lower than 2.50 in any of the subjects in the First Quarter, SY 2023-2024; and</li>
+                <li>preferably have interest in Japanese culture and with talents in music and/or dance (for the group performance).</li>
+            </ul>
+            <p>Additionally, all students who will be selected for the program are expected to participate in the events in school on January 5 and 7, 2024 (Friday 9-11AM and Sunday 830AM-430PM, respectively).</p>
+            <p>Moreover, seven (7) out of all the participants in the program will be chosen to join the Intramuros Tour with the Japanese delegates on January 6, 2024 (Saturday).</p>
+            <p>If you are interested to apply, please fill out this form by 26 Dec, 12NN. Some FAQs will be posted on this <a href="#">link</a>.</p> -->
         </div>
-    </div> 
-    <!-- super container end -->
+    </div>
+    <div class="testimonials-section">
+        <h2 class="sectionTitle">TESTIMONIALS</h2>
+        <div class="testimonials-carousel-wrapper">
+            <div class="testimonials-carousel" id="testimonialTrack">
+            <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
+                <div class="testimonial-content">
+                <p class="quote">"This program changed my life!"</p>
+                <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
+                </div>
+            </div>
+            <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
+                <div class="testimonial-content">
+                <p class="quote">"This program changed my life!"</p>
+                <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
+                </div>
+            </div>
+            <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
+                <div class="testimonial-content">
+                <p class="quote">"This program changed my life!"</p>
+                <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
+                </div>
+            </div>
+            <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
+                <div class="testimonial-content">
+                <p class="quote">"This program changed my life!"</p>
+                <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
+                </div>
+            </div>
+            <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
+                <div class="testimonial-content">
+                <p class="quote">"This program changed my life!"</p>
+                <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
+                </div>
+            </div>
+            <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
+                <div class="testimonial-content">
+                <p class="quote">"This program changed my life! This program was so awesome oh my goodness!!!"</p>
+                <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
+                </div>
+            </div>
+            <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
+                <div class="testimonial-content">
+                <p class="quote">"This program changed my life!"</p>
+                <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
+                </div>
+            </div>
+            <div class="testimonial" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pshs.edu.ph/wp-content/uploads/2024/01/418490125_781878173960713_5401831397726759148_n.jpg');">
+                <div class="testimonial-content">
+                <p class="quote">"This program changed my life!"</p>
+                <p class="author">Aldrei Kayl G. Estrada<br>Batch 2026<br>Japanese Exchange Program</p>
+                </div>
+            </div>
+            <!-- Duplicate here -->
+            </div>
+            <div class="testimonial-dots" id="testimonialDots"></div>
+        </div>
+    </div>
     <div id = "footer">
         <div style = "display: flex; align-items: center;">
             <img src = "../resources/permanent/pshs_logo.png" alt = "PSHS Logo" style="object-fit: contain;">
@@ -256,6 +244,15 @@
     const track = document.getElementById('testimonialTrack');
     const dotsContainer = document.getElementById('testimonialDots');
     const testimonials = Array.from(track.children);
+
+    window.onload = function () {
+        document.querySelectorAll(".opportunity").forEach(row => {
+        row.querySelector(".title").textContent = row.dataset.title ?? "TBA";
+        row.querySelector(".location").textContent = row.dataset.location ?? "TBA";
+        row.querySelector(".contact").textContent = row.dataset.contact ?? "TBA";
+        row.querySelector(".date").textContent = row.dataset.date ?? "TBA";
+        });
+    };
 
     function getItemsPerPage() {
         if (window.innerWidth <= 480) return 1;
@@ -325,8 +322,6 @@
             const qualifications = row.dataset.qualifications;
             const extra = row.dataset.extra;
 
-            qualificationsContainerTitle.innerHTML = title;
-
             qualificationsContainer.innerHTML = `
                 <h2>${title}</h2>
                 <p>${description}</p>
@@ -339,7 +334,6 @@
             row.classList.add('selected');
         });
     });
-
 
 </script>
 
