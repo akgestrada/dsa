@@ -1,0 +1,98 @@
+#about-container {
+  width: 100%;
+  min-height: 90vh;
+  /* max-width: 1200px; */
+  /* margin: 4vh auto; */
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.about-dsa {
+  margin-bottom: 4vh;
+}
+
+.about-dsa > div {
+  /* background: blue; */
+  /* border-top: 2px solid black; */
+  /* border-bottom: 2px solid black; */
+  box-shadow: 0 0 3px 3px rgb(167, 167, 167) inset;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: fit-content; */
+  /* height: 40vh; */
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.about-dsa h2,
+.meet-dsa h2 {
+  font-size: 1.8rem;
+  /* margin-bottom: 1rem; */
+}
+
+.about-dsa h2 {
+  width: 100%;  
+  text-align: center;
+}
+
+.about-dsa p {
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: justify;
+  display: block;
+}
+
+.meet-dsa {
+  margin-top: 2rem;
+  max-width: 1200px;
+  justify-self: center;
+}
+
+.dsa-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.dsa-member {
+  width: 200px;
+  text-align: center;
+}
+
+.dsa-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.member-info h4 {
+  margin: 0.5rem 0 0.3rem;
+  font-size: 1rem;
+}
+
+.member-info p {
+  font-size: 0.85rem;
+  margin: 0.1rem 0;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .dsa-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-dsa h2,
+  .meet-dsa h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-dsa p {
+    font-size: 0.9rem;
+  }
+}

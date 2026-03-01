@@ -1,0 +1,221 @@
+body {
+    background: var(--offwhite);
+}
+
+/* header *************************************************************************************************************/
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 4rem;
+    align-items: center;
+    /* background: var(--darkblue); */
+    background: radial-gradient(circle at 50%, 
+        rgba(0, 0, 0, 0.0) 0%,
+        rgba(0, 0, 0, 0.1) 55%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    background-color: var(--darkblue);
+    border-bottom: 0.3rem solid var(--yellow);
+}
+
+.header h1 {
+    font-family: 'Days One', serif; 
+    font-size: 2rem;
+    display: inline-block;
+    position: absolute;
+    left: 1rem;
+    color: white;
+}
+
+.header > div {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    background: var(--darkblue);
+    font-size: 1rem;
+    align-items: center;
+    border-radius: 0.75rem;
+    /* border: 1px solid var(--yellow); */
+}
+
+.header a {
+    color: white;
+    font-family: "Work Sans", serif;
+    font-weight: 300;
+}
+
+.header > div > div {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    border-radius: 0.75rem;
+}
+
+.header > div > div:hover {
+    background: blue;
+}
+
+/* frontImage *************************************************************************************************************/
+
+.frontImage {
+    height: 45vh;
+    width: 100%;
+    /* border-top: 0.3rem solid var(--yellow); */
+    border-bottom: 0.3rem solid var(--yellow);
+    background-image: url('../resources/images/pisay-field-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.frontImage1 {
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle at 50%, 
+        rgba(8, 36, 82, 0.3) 0%,
+        rgba(24, 64, 140, 0.1) 55%,
+        rgba(230, 190, 80, 0.3) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frontImage1 > div {
+    display: inline;
+    color: white;
+    font-family: 'CooperBT', serif;
+    font-size: 3rem;
+    letter-spacing: 0.07rem;
+}
+
+.frontImage1 > div > span {
+    display: inline;
+    font-family: 'Niconne', serif;
+    margin-right: 0.3rem;
+}
+
+/* frontImage > searchbar-container *************************************************************************************************************/
+
+.searchbar-container {
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    /* gap: 0.4rem; */
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.searchbar-container img {
+    height: 1.5rem;
+    width: 1.5rem;
+    filter: invert(1);
+    margin: 0 0.3rem;
+    transform: scaleX(-1);
+}
+
+.searchbar-container input {
+    width: 100%;
+    outline: none;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+
+/* dsaOfficesContainer *************************************************************************************************************/
+
+.dsaOfficesContainer {
+    width: 100%;
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+    padding-top: 3rem;
+    /* dependent values */
+    min-height: calc(100vh - 45vh - 4rem); 
+}
+
+.dsaOfficesContainer > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.dsaOfficesContainer a div {
+    font-family: 'Work Sans';
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: white;
+    background: var(--darkblue);
+    padding: 1rem 1rem;
+    border-radius: .7rem;
+}
+
+.dsaOfficesContainer > div > div {
+    /* width: 100vw; */
+    width: 100%;
+    height: 0;
+    margin: -1rem;
+    background: blue;
+}
+
+@media (max-width: 900px) {
+    .dsaOfficesContainer > div > div {
+        display: none;
+    }
+}
+
+/* dsaOfficesContainer *************************************************************************************************************/
+
+.dsaOfficesContainerV2 {
+    /* dependent variables */
+    height: calc(100vh - 45vh - 4rem); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    display: none;
+}
+
+.dsaOfficesContainerV2 > div {
+    background: blue;
+}
+
+.dsaOfficesContainerV2-1 {
+    height: 70%;
+    width: 20%;
+}
+
+.dsaOfficesContainerV2-2 {
+    height: 80%;
+    width: 40%;
+}
+
+.dsaOfficesContainerV2-3 {
+    height: 70%;
+    width: 20%;
+}
+
+/* footer *************************************************************************************************************/
+
+.footer {
+    background: var(--darkblue);
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    color: white;
+}
+
+.footer > img {
+    width: 10rem;
+}

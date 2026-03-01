@@ -4,6 +4,32 @@
     padding: 0;
 }
 
+@font-face {
+  font-family: "CooperBT";
+  src: url("../resources/fonts/CooperLtBT-Regular.ttf") format("woff2"),
+       url("../resources/fonts/CooperLtBT-Regular.ttf") format("woff")
+       url("../resources/fonts/CooperLtBT-Regular.ttf") format('embedded-opentype'),
+       url("../resources/fonts/CooperLtBT-Regular.ttf") format('truetype'),
+       url("../resources/fonts/CooperLtBT-Regular.ttf") format('svg');
+       
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --dark-blue: #012c63;
+  --darkblue: #012c63;
+  --offwhite: #f9f5ee;
+  --yellow : #ffde59;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 #header {
     height: 10vh;
     width: 100%;

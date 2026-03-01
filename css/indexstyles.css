@@ -10,6 +10,7 @@
     padding-right: 5vw;
     overflow: hidden;
     padding-top: 6vh;
+    /* gap: 2rem; */
     /* temmporary */
     /* border: 1px solid blue; */
     /* background: red; */
@@ -152,12 +153,14 @@
 #divisions-container {
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
+    width: 100%;
     gap: 2rem;
     z-index: 1;
     position: relative;
     justify-content: center;
     align-self: center;
+    /* background: red; */
+    margin-bottom: 2rem;
 }
 
 .division {
