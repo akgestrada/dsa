@@ -30,32 +30,42 @@
 <body>
     <div id="header">
         <h1 class="logo">DSA</h1>
-
-        <h1 class="page-name hidden md:block">Leadership and Exchange Program</h1>
-
+        <h1 class="page-name hidden md:block">Resources</h1>
         <div class="nav">
             <div><a href="../index.html">Home</a></div>
             <div><a href="./about.html">About</a></div>
             <div><a href="./resources.html">Resources</a></div>
         </div>
     </div>
-    <h1 style = "font-family: 'Days One', serif; margin-left: 1vw; margin-top: 1vh; margin-bottom: 1vh;">Resources</h1>
-    <hr>
+
+
     <div class="file-browser">
-        <div class="sidebar">
-            <label>SEARCH</label>
-            <input type="text" id="fileSearch" placeholder="Search resources here...">
-            <div class="filter-group">
-            <label><input type="checkbox" class="division-filter" value="Leadership and Exchange Program" checked> Leadership and Exchange Program</label>
-            <label><input type="checkbox" class="division-filter" value="Homeroom Program" checked> Homeroom Program</label>
-            <label><input type="checkbox" class="division-filter" value="Batch Council" checked> Batch Council</label>
-            <label><input type="checkbox" class="division-filter" value="Student Council" checked> Student Council</label>
-            <label><input type="checkbox" class="division-filter" value="SCALE" checked> SCALE</label>
-            <label><input type="checkbox" class="division-filter" value="Clubs" checked> Clubs</label>
-            </div>
+        <div class="barContainer">
+            <div> 
+                <div class="filter">
+                        <input type="text" readonly placeholder="Filter">
+                        <div class="filter-group">
+                            <label><input type="checkbox" class="division-filter" value="Leadership and Exchange Program" checked><span>Leadership and Exchange Program</span></label>
+                            <label><input type="checkbox" class="division-filter" value="Homeroom Program" checked><span>Homeroom Program</span></label>
+                            <label><input type="checkbox" class="division-filter" value="Batch Council" checked><span>Batch Council</span></label>
+                            <label><input type="checkbox" class="division-filter" value="Student Council" checked><span>Student Council</span></label>
+                            <label><input type="checkbox" class="division-filter" value="SCALE" checked><span>SCALE</span></label>
+                            <label><input type="checkbox" class="division-filter" value="Clubs" checked><span>Clubs</span></label>
+                        </div>
+                        
+                        <!-- <label><input type="checkbox" class="division-filter" value="Leadership and Exchange Program" checked> Leadership and Exchange Program</label>
+                        <label><input type="checkbox" class="division-filter" value="Homeroom Program" checked> Homeroom Program</label>
+                        <label><input type="checkbox" class="division-filter" value="Batch Council" checked> Batch Council</label>
+                        <label><input type="checkbox" class="division-filter" value="Student Council" checked> Student Council</label>
+                        <label><input type="checkbox" class="division-filter" value="SCALE" checked> SCALE</label>
+                        <label><input type="checkbox" class="division-filter" value="Clubs" checked> Clubs</label> -->
+                </div>
+                <input type="text" id="fileSearch" placeholder="Search resources here...">
+            </div>   
         </div>
         <div class="file-grid" id="fileGrid"></div>
     </div>
+
     <div id = "footer">
         <div style = "display: flex; align-items: center;">
             <img src = "../resources/permanent/pshs_logo.png" alt = "PSHS Logo" style="object-fit: contain;">
@@ -164,5 +174,31 @@
 
     // Initial render
     renderFiles();
+
+    let filter = document.querySelector(".filter");
+    let filterGroup = document.querySelector(".filter-group");
+    let divisionFilter = document.querySelector(".division-filter");
+
+    filter.onclick = function () {
+        filter.classList.toggle("active");
+    }
+
+    filter.onclick = function () {
+        this.classList.toggle("active");
+    }
+
+    filterGroup.onclick = function (e) {
+        e.stopPropagation(); 
+    }
+
+    filter.onmouseleave = function () {
+        closeTimer = setTimeout(() => {
+            this.classList.remove("active");
+        }, 500);
+    }
+
+    filter.onmouseenter = function () {
+        clearTimeout(closeTimer);
+    }
 </script>
 </html>

@@ -104,6 +104,14 @@ input::placeholder {
     background: var(--darkblue);
     padding: 1rem 1rem;
     border-radius: .7rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dsaOfficesContainer a div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #003377;
+    border-color: #ffd700;
 }
 
 .dsaOfficesContainer > div > div {

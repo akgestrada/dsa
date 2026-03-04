@@ -18,10 +18,10 @@
 }
 
 :root {
-  --dark-blue: #012c63;
-  --darkblue: #012c63;
-  --offwhite: #f9f5ee;
-  --yellow : #ffde59;
+  --dark-blue: #012c63; /* rgb(1, 44, 99) */
+  --darkblue: #012c63; /* rgb(1, 44, 99) */
+  --offwhite: #f9f5ee; /* rgb(249, 245, 238) */
+  --yellow : #ffde59; /* rgb(255,222,89) */
 }
 /* ----- HEADER ----- */
 #header {
@@ -41,6 +41,7 @@
     );
     background-color: var(--darkblue);
     border-bottom: 0.3rem solid var(--yellow);
+    box-shadow: 0 0 3px 3px rgb(167, 167, 167);
 }
 
 #header .logo {
@@ -75,6 +76,16 @@
     border-radius: 0.75rem;
 }
 
+#header .nav div {
+    transition: all 0.3s ease;
+}
+
+#header .nav div:hover {
+    color: #ffd700; 
+    text-decoration: underline;
+    /* background: rgba(230, 190, 80, 0.3); */
+}
+
 #header a {
     color: white;
     font-family: "Work Sans", serif;
@@ -85,10 +96,6 @@
 #header .nav > div {
     padding: 0.25rem 0.5rem;
     border-radius: 0.75rem;
-}
-
-#header .nav > div:hover {
-    background: blue;
 }
 
 

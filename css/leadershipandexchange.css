@@ -3,28 +3,23 @@ html {
 }
 
 body {
-    /* background: #f9f9f9; */
-    background: transparent;
+    /* background: transparent; */
+    background: var(--offwhite);
+    z-index: -100;
 }
 
-/* .division-title{ */
-    /* font-family: 'Days One', serif; 
-    margin-left: 1vw; 
-    margin-top: 1vh; 
-    margin-bottom: 1vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column; */
-    /* background: green; */
-/* } */
-
-/* .division-title > h1 { */
-    /* width: fit-content;
-    height: fit-content;
-    background-color: white;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border-radius: 1.5rem; */
-/* } */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(../resources/images/paper1.png);
+    opacity: 0.1;
+}
+/* container *************************************************************************************************************/
 
 .container{
     min-width: 100%; /* di ko alam bakit pag width: 100% di siya gumagana but oh well */
@@ -32,13 +27,19 @@ body {
     margin-bottom: 3%;
     justify-content: center;
     filter: drop-shadow(0 0 2px rgb(218, 218, 218));
-    flex-direction: column;
     align-items: center;
 }
 
+.sectionTitle {
+    margin-top: 5vh;
+    /* background: blue; */
+}
+
+/* #table-container *************************************************************************************************************/
+
 #table-container {
-    /* width: 60%;
-    max-height: 400px;
+    width: 60%;
+    max-height: 500px;
     overflow-y: auto;
     font-family: 'PP Neue Montreal', 'Roboto', sans-serif;
     background: white;
@@ -48,57 +49,31 @@ body {
     padding-bottom: 1.2rem;
     border-top: 2px solid rgb(218, 218, 218);
     border-bottom: 2px solid rgb(218, 218, 218); 
-    scrollbar-width: none; */
+    /* scrollbar-width: none; */
 
-    max-height: 80vh;
+    /* max-height: 80vh;
     overflow: auto;
     font-family: 'PP Neue Montreal', 'Roboto', sans-serif;
     background: white;
     border-radius: 20px;
     border-top: 2px solid rgb(218, 218, 218);
     border-bottom: 2px solid rgb(218, 218, 218);
-    margin-bottom: 1vh;
-    /* scrollbar-width: none; */
+    margin-bottom: 1vh; */
 }
 
-/* .label-container {
-    display: grid;
-    padding: 1.2rem 5% 0.5rem 5%;
-    width: 100%;
-    grid-auto-flow: column;
-}
-
-.label-container > h2 {
-    font-weight: 500;
-    font-size: 1.5rem;
-}
-
-.label-container > p {
-    width: 100%;
-    text-align: right;
-    align-self: flex-end;
-    padding-bottom: 0.2rem;
-    color: rgb(150, 150, 150);
-} */
+/* #opportunities-table *************************************************************************************************************/
 
 #opportunities-table {
-    /* width: 90%;
-    border-collapse: collapse;
-    font-size: 1rem;
     overflow-y: auto;
-    margin-left: 5%; */
-
     width: 100%;
     max-height: 100%;
     border-collapse: collapse;
     font-size: 1rem;
     overflow-y: auto;
-    border-radius: 20px;
+    border-radius: 1rem;
 }
 
 #opportunities-table thead {
-    /* border-top: 2px solid #e9e9e9; */
-
     background: #012c63;
     color: rgba(255, 255, 255, 0.797);
     position: sticky !important;
@@ -125,6 +100,20 @@ body {
     cursor: pointer;
 }
 
+#opportunities-table > tbody > tr {
+    transition: 0.3s ease;
+}
+
+#opportunities-table > tbody > tr:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+#opportunities-table tr:nth-of-type(2n) {
+    background: var(--offwhite);
+}
+
+/* #qualifications-container *************************************************************************************************************/
+
 #qualifications-container {
     max-height: 500px;
     overflow-y: auto;
@@ -140,7 +129,8 @@ body {
     /* box-shadow: 0px 3px #012c63; */
 
     /* background: rgb(207, 243, 255); */
-    background: rgb(239, 239, 239);
+    /* background: rgb(239, 239, 239); */
+    background: white;
     border-radius: 20px;
 }
 
@@ -177,6 +167,8 @@ body {
     border-bottom: 2px solid rgb(218, 218, 218);
     margin-bottom: 3%;
 }
+
+/* .testimonials-section *************************************************************************************************************/
 
 .testimonials-carousel-wrapper {
     position: relative;
@@ -313,22 +305,6 @@ body {
   .testimonial {
     flex: 0 0 98%;
   }
-}
-
-#opportunities-table td:first-of-type {
-    /* border-radius: 1.2rem 0 0 1.2rem; */
-}
-
-#opportunities-table td:last-of-type{
-    /* border-radius: 0 1.2rem 1.2rem 0; */
-}
-
-#opportunities-table > tbody > tr {
-    transition: 0.3s ease;
-}
-
-#opportunities-table > tbody > tr:hover {
-    background: rgba(0,0,0,0.1);
 }
 
 .scroll-up-indicator {
